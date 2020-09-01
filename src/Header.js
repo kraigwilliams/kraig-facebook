@@ -35,17 +35,15 @@ function Header() {
         </div>
         <div className="header__option">
           <StorefrontOutlinedIcon fontSize="large" />
-
+          </div>
           <div className="header__option">
             <SupervisedUserCircleIcon fontSize="large" />
           </div>
-        </div>
+        
       </div>
       <div className="header__right">
-       <Avatar /> <h4>Kraig</h4>
+        <Avatar /> <h4>Kraig</h4>
         <div className="header__info">
-          
-          
           <IconButton>
             <AddIcon />
           </IconButton>
