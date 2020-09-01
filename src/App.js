@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './Header'
-
+import Sidebar from './Sidebar'
 import './App.css';
 
 function App() {
@@ -9,7 +9,11 @@ function App() {
     <div className="app">
       
       <Header/>
-    </div>
+<div className='app__body'>
+<Sidebar/>
+</div>
+
+    </div> //end app
   );
 }
 
