@@ -8,10 +8,10 @@ function App() {
   return (
     <div className="app">
       
-      <Header/>
+      <Header/> 
 <div className='app__body'>
-<Sidebar/>
-</div>
+<Sidebar/> 
+   </div> 
 
     </div> //end app
   );
