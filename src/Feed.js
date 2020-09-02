@@ -4,8 +4,8 @@ function Feed() {
     return (
         <div className='feed'>
             middle
-            {/* Storywheel */}
-            {/* MessageSidebar */}
+            {/* StoryReel */}
+            {/* MessageSender */}
         </div>
     )
 }
