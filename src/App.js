@@ -12,8 +12,9 @@ function App() {
       <Header/> 
 <div className='app__body'>
 <Sidebar/> 
-   </div> 
+   
 <Feed/>
+</div> 
     </div> //end app
   );
 }
