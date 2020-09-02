@@ -11,6 +11,9 @@ import StorefrontOutlinedIcon from "@material-ui/icons/StorefrontOutlined";
 import SubscriptionsOutlinedIcon from "@material-ui/icons/SubscriptionsOutlined";
 import ForumIcon from "@material-ui/icons/Forum";
 import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
+import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
+
+
 function Header() {
   return (
     <div className="header">
@@ -50,9 +53,13 @@ function Header() {
           </IconButton>
           <IconButton>
             <ForumIcon />
+         
           </IconButton>
           <IconButton>
             <NotificationsActiveIcon />
+          </IconButton>
+          <IconButton>
+            <ExpandMoreOutlinedIcon />
           </IconButton>
         </div>
       </div>

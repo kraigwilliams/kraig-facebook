@@ -7,6 +7,7 @@ import PeopleIcon from '@material-ui/icons/People'
 import ChatIcom from '@material-ui/icons/Chat'
 import StorefrontIcon from '@material-ui/icons/Storefront'
 import VideoLibraryIcon from '@material-ui/icons/VideoLibrary'
+import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
 import avatar from './images/face.png'
 
 function Sidebar() {
@@ -19,7 +20,7 @@ function Sidebar() {
             <SidebarRow Icon={ChatIcom} title='Messenger'/>
             <SidebarRow Icon={StorefrontIcon} title='Marketplace'/>
             <SidebarRow Icon={VideoLibraryIcon} title='Videos'/>
-             
+            <SidebarRow Icon={ExpandMoreOutlinedIcon} title='More'/>
             
         </div>
     )
