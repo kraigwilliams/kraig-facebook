@@ -3,18 +3,20 @@ import StoryReel from './StoryReel';
 import './Feed.css'
 import MessageSender from './MessageSender'
 import Post from './Post'
-import avatar from './images/face.png';
-import post1 from './images/background1.png';
+//import avatar from './images/face.png';
+//import post1 from './images/background1.png';
 import db from './firebase'
-import firebase from 'firebase'
+//import firebase from 'firebase'
 
 
 function Feed() {
 
     const [posts, setPosts] = useState([])
 useEffect(()=>{
-    db.collection('posts').onSnapshot(snapshot=>(
-        setPosts(snapshot.docs.map((doc)=>({id:doc.id,data:doc.data()})))
+    db.collection('posts')
+    .orderBy('timestamp','desc')
+    .onSnapshot(snapshot=>(
+        setPosts(snapshot.docs.map(doc=>({id:doc.id,data:doc.data()})))
     ))
 },[])
 
@@ -24,15 +26,19 @@ useEffect(()=>{
             
             <StoryReel/>
             <MessageSender/>
-            <Post
-            // key={id}
-            profilePic={avatar}
-            message='my first port'
-            timestamp='some time in history'
-            image={post1}
-            />
-            <Post/>
-            <Post/>
+
+            {posts.map(post=>
+                <Post
+                key={post.id}
+                profilePic={post.data.profilePic}
+                message={post.data.message}
+                timestamp={post.data.timestamp}
+                username={post.data.username}
+                image={post.data.image}
+                />
+                
+                )}
+            
         </div>
     )
 }
