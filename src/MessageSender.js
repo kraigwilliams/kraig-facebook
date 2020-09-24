@@ -4,12 +4,22 @@ import { Avatar} from "@material-ui/core";
 import VideocamIcon from '@material-ui/icons/Videocam';
 import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
+import db from './firebase'
+import firebase from 'firebase';
 
 function MessageSender() {
 const [input, setInput]= useState("")
 const [imageUrl,setImageUrl]=useState("")
     const handleSubmit = function(e){
         e.preventDefault()
+           db.collection('posts').add({
+               message:input,
+               timestamp:firebase.firestore.FieldValue.serverTimestamp(),
+               profillePic:user.photoUrl,
+               username:user.displayName,
+               image:imageUrl
+           })
+        // post to the database            
         setInput('')
         setImageUrl('')
     }
